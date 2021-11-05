@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="3D_lidar_based_clustering" type="subscriber" name="subscriber" output="screen"/>
+</launch>
