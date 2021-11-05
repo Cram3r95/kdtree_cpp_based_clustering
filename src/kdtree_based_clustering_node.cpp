@@ -14,11 +14,11 @@ int main(int argc, char **argv)
   
   // Subscribers
 
-  ros::Subscriber point_cloud = nh.subscribe("/carla/ego_vehicle/lidar/lidar1/point_cloud", 1, pclCallback);
+  ros::Subscriber point_cloud = nh.subscribe("/t4ac/perception/sensors/lidar", 1, pclCallback);
   // ros::Subscriber point_cloud = nh.subscribe("/velodyne_points", 1, pclCallback);
 
   // Publishers
-  marker_pub = nh.advertise<visualization_msgs::MarkerArray>("/t4ac_perception/kd_tree", 1);
+  marker_pub = nh.advertise<visualization_msgs::MarkerArray>("/t4ac/perception/detection/lidar/3D_lidar_obstacles_markers", 1);
 
   // function that calls each callback
   ros::spin();
